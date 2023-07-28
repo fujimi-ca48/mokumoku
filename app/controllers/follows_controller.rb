@@ -1,6 +1,6 @@
 class FollowsController < ApplicationController
 
-    def create
+   def create
       @user = User.find(params[:follow][:following_id])
      current_user.follow!(@user)
      redirect_to @user
